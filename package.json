@@ -1,0 +1,52 @@
+{
+  "name": "pactra",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "policy:demo": "tsx scripts/seed-demo.ts",
+    "proof:generate": "tsx scripts/generate-proof.ts",
+    "proof:verify": "tsx scripts/verify-proof.ts",
+    "proof:inputs": "tsx scripts/export-pactra-inputs.ts",
+    "verifier:test-vector": "tsx scripts/export-verifier-test-vector.ts",
+    "demo:e2e": "tsx scripts/demo-e2e.ts",
+    "circuit:input": "tsx scripts/seed-circuit-input.ts",
+    "witness:generate": "tsx scripts/generate-witness.ts",
+    "circuit:check": "tsx scripts/check-circom.ts",
+    "circuit:build": "tsx scripts/build-circuit.ts",
+    "circuit:setup": "tsx scripts/setup-circuit.ts",
+    "verifier:export": "tsx scripts/export-verifier.ts",
+    "zk:export": "tsx scripts/export-zk-artifacts.ts",
+    "test:zk": "tsx --test frontend/src/lib/zk/formatForContract.test.ts",
+    "seed:live-mandate": "tsx scripts/seed-live-mandate.ts",
+    "live:reset": "tsx scripts/live-reset.ts",
+    "live:check": "tsx scripts/live-check.ts",
+    "live:dry-run": "tsx scripts/live-dry-run.ts",
+    "deploy:testnet": "tsx scripts/deploy-testnet.ts",
+    "contracts:test": "cargo test --workspace",
+    "contracts:build": "stellar contract build"
+  },
+  "dependencies": {
+    "@creit.tech/stellar-wallets-kit": "^2.4.0",
+    "@stellar/stellar-sdk": "^16.0.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "eslint": "^9.0.0",
+    "snarkjs": "^0.7.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}

@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = [
+  "contracts/pactra",
+  "contracts/mock-verifier",
+  "contracts/groth16-verifier"
+]
+
+[workspace.dependencies]
+soroban-sdk = "26.0.0-rc.1"
+
+[profile.release]
+overflow-checks = true
